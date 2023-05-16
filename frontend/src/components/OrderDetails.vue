@@ -19,9 +19,9 @@
             </div>
 
             <div class="price">
-                <p>Sale: {{ data[0].bill_discount }}đ</p>
-                <p>Phí vận chuyển: {{ data[0].bill_delivery }}đ</p>
-                <p>Tổng cộng: {{ data[0].bill_total }}đ</p>
+                <p>Sale: {{ this.data[0].bill_discount }}đ</p>
+                <p>Phí vận chuyển: {{ this.data[0].bill_delivery }}đ</p>
+                <p>Tổng cộng: {{ this.data[0].bill_total }}đ</p>
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@ export default {
         async getAllData() {
             if (this.bill) {
                 this.data = (await axios.get('/billstatus/bill/' + this.bill)).data;
-                console.log("bill match = ",this.data);
+                console.log("bill match = ",this.data[0]);
             }
         },
     }

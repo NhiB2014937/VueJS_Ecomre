@@ -1,27 +1,27 @@
 <template>
     <div id="create-product">
-        <h1>---------------------------Create Product Option----------------------</h1>
+        <h1>----------------------------------------Create Product Option----------------------------</h1>
 
         <!-- <p><router-link :to="{ name: 'all_products' }">Return to products</router-link></p> -->
         
         <form @submit="addOptionProduct" >
             
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="option">Food ID</label>
                 <input type="number" class="form-control" v-model="food.food_id" id="option" required>
                 <p class="error-mess" v-if="errorObj.id.length > 0">{{ errorObj.id[0]}}</p>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="food_name">Food Name</label>
                 <input type="text" class="form-control" id="food_name" v-model="food.food_name" @onChange="findFoodId" required>
                 <p class="error-mess" v-if="errorObj.name.length > 0">{{ errorObj.name[0]}}</p>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="option_desc">Option</label>
                 <input type="text" class="form-control" v-model="option.option_description" id="option_desc" required>
                 <p class="error-mess" v-if="errorObj.description.length > 0">{{ errorObj.description[0]}}</p>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="price_option">Price Option</label>
                 <input type="number" class="form-control" v-model="option.price_option" id="price_option" required>
                 <p class="error-mess" v-if="errorObj.price.length > 0">{{ errorObj.price[0]}}</p>
@@ -29,7 +29,7 @@
             
             
                 
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <button class="btn btn-primary">Create</button>
                 <button class="btn btn-primary" @click="clearForm">Clear Form</button>
                 <button class="btn btn-primary" @click="findFoodId">Find Food ID By Name</button>

@@ -1,44 +1,49 @@
 <template>
     <div id="create-product">
-        <h1>-----------------------------Create Product------------------------</h1>
+        <h1 class="mx-auto" >-----------------------------------------------Create Product----------------------------------------</h1>
 
         <!-- <p><router-link :to="{ name: 'all_products' }">Return to products</router-link></p> -->
         
 
         <form @submit="addProduct" >
             
-            <div class="form-group col-md-6">
+
+            <div class="form-group col-md-6 mx-auto">
                 <label name="product_name">Name</label>
                 <input type="text" class="form-control" v-model="product.food_name" id="product_name" required>
             </div>
-            <div class="form-group col-md-6">
-                <label name="product_start">Start</label>
+            <div class="form-group col-md-6 mx-auto">
+                <label class="label label-info" name="product_start">Star</label>
                 <input type="number" class="form-control" v-model="product.food_star" id="product_start" required>
                 <p class="error-mess" v-if="errorObj.star.length > 0">{{ errorObj.star[0]}}</p>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="product_vote">Vote</label>
                 <input type="number" class="form-control" v-model="product.food_vote" id="product_vote" required>
                 
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="product_price">Price</label>
                 <input type="number" class="form-control" v-model="product.food_price" id="product_price" required>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="product_discount">Discount</label>
                 <input type="number" class="form-control" v-model="product.food_discount" id="product_discount" required>
                 <p class="error-mess" v-if="errorObj.discount.length > 0">{{ errorObj.discount[0]}}</p>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="product_desc">Description</label>
                 <input type="text" class="form-control" v-model="product.food_desc" id="product_desc" required>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="product_status">Status</label>
                 <input type="text" class="form-control" v-model="product.food_status" id="product_status" required>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
+                <label name="product_category">Category</label>
+                <input type="text" class="form-control" v-model="product.food_category" id="product_category" required>
+            </div>
+            <div class="form-group col-md-6 mx-auto">
                 <label name="product_type">Type</label>
                 <input type="text" class="form-control" v-model="product.food_type" id="product_type" required>
             </div>
@@ -54,7 +59,7 @@
                 <label name="product_category">Category</label>
                 <input type="text" class="form-control" v-model="product.food_category" id="product_category" required>
             </div> -->
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <label name="product_source">Source</label>
                 <input type="file" class="form-control" v-on:change="handleFileUpload($event)" ref="inputFile" id="product_source" required>
                 <p class="error-mess" v-if="errorObj.image.length > 0">{{ errorObj.image[0]}}</p>
@@ -62,7 +67,7 @@
             
             
 
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 mx-auto">
                 <button class="btn btn-primary">Create</button>
                 <button class="btn btn-primary" @click="clearForm">Clear Form</button>
             </div>

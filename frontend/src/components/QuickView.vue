@@ -12,9 +12,9 @@
                 </div>
                 <div class="content">
                     <p class="desc">{{ f.food_desc }}</p>
-                    <p class="money">{{ parseFloat(f.food_price) - parseFloat(f.food_discount) + parseFloat(this.optionPrice)}}đ<span
+                    <p class="money">{{ (parseFloat(f.food_price) - parseFloat(f.food_discount) + parseFloat(this.optionPrice)) * this.qty}}đ<span
                             v-if="parseFloat(f.food_discount) > 0">{{
-                                    parseFloat(f.food_price) + parseFloat(this.optionPrice)
+                                    (parseFloat(f.food_price) + parseFloat(this.optionPrice))*parseFloat(this.qty)
                             }}đ</span></p>
                     <div class="qty">
                         <label for="qty">Số lượng:</label>
@@ -24,10 +24,12 @@
                     <div class="option">
                         <label for="option">Option: </label>
 
-                        <div v-for="option in getFoodsOptions" :key="option">
-                            <input type="checkbox" :id="option.option_id" :value="option.option_id" v-model="options">
-                            <label :for="option.option_id">{{ option.option_description }}</label>
-                        </div>
+                        <span v-for="option in getFoodsOptions" :key="option">
+        
+                                <input type="checkbox" :id="option.option_id" :value="option.option_id" v-model="options">
+                                <label :for="option.option_id">{{ option.option_description }}</label>
+                            
+                        </span>
                     </div>
                     
                     <div class="note">
@@ -111,6 +113,7 @@ export default {
             if (e.target.value < 1) {
                 e.target.value = 1;
                 this.qty = e.target.value;
+
             } else {
                 this.qty = e.target.value;
             }
