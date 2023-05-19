@@ -34,7 +34,7 @@
                     
                     <div class="note">
                         <label for="qty">Note:</label>
-                        <input type="textarea" v-model="note" />
+                        <input type="textarea" placeholder="ghi chú" v-model="note" />
                     </div>
                     <button class="btn" @click="addToCart">Thêm vào giỏ hàng</button>
                     <button class="btn" @click="updatePriceOption">Update</button>
@@ -67,7 +67,7 @@ export default {
         return {
             qty: 1,
             options: [],
-            note : "none",
+            note : "",
             optionPrice: 0,
         }
     },
@@ -168,7 +168,7 @@ export default {
                 }
             
             this.options = [];
-            this.note = "none";
+            this.note = "";
             this.optionPrice=0;
         }
     },

@@ -38,7 +38,7 @@
                                                 class="cart-product-img" />
                                         </div>
 
-                                        <div class="desc col-sm-4">
+                                        <div class="desc col-sm-3">
                                             <h2 class="item-name">{{ f.food_name }}</h2>
                                             <div class="item-desc">
                                                 <b>Thông tin món</b>
@@ -75,6 +75,11 @@
                                             }}đ 
                                             </h4>
                                             <span>{{handleOptionName(f.option_id)}}</span>
+                                        </div>
+                                        <div class="cal-total col-sm-1">
+                                            
+                        
+                                            <span>Note :{{(f.note)}}</span>
                                         </div>
                                         
                                     </div>

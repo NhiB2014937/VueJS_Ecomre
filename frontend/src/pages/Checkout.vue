@@ -225,12 +225,13 @@ export default {
             }
         },
 
-        async sendBillDetails(billId, foodId, qty,option) {
+        async sendBillDetails(billId, foodId, qty,option,note) {
             let billDetails = {
                 bill_id: parseInt(billId),
                 food_id: parseInt(foodId),
                 item_qty: parseInt(qty),
                 option_id :option,
+                note: note,
             }
 
             await axios.post("/billdetails", billDetails);
@@ -252,7 +253,7 @@ export default {
                 }
 
                 this.cart.forEach((f,index) => {
-                    this.sendBillDetails(billId,f.food_id ,this.itemQuantity[index],f.option_id );
+                    this.sendBillDetails(billId,f.food_id ,this.itemQuantity[index],f.option_id ,f.note);
                 });
 
                 var now = new Date();

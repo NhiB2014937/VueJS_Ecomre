@@ -13,6 +13,7 @@
                         <div class="content">
                             <p class="name">{{ f.food_name }} <span>X {{ f.item_qty }} X {{handleOptionName(f.option_id)}}</span></p>
                             <p class="desc">{{ f.food_desc }}</p>
+                            <p class="desc">Note :{{ f.note }}</p>
                         </div>
                     </div>
                 </div>

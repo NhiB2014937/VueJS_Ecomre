@@ -21,7 +21,8 @@
                         <th>Paid</th>
                        
                         <th>Tên SP x Số Lượng x Options</th>
-                        
+                        <th>Category</th>
+                        <th>Note</th>
                         <th>Trạng thái</th>
                         <th>Kiểm cuối</th>
                     </tr>
@@ -36,7 +37,8 @@
                         <td>${{ b.bill_total }}</td>
                         
                         <td>{{ b.food_name}} x {{b.item_qty}} x {{handleOptionName(b.option_id)}}</td>
-                       
+                        <td>{{ b.food_category }}</td>
+                        <td>{{ b.note }}</td>
                         <td>{{ avaiableStatus[b.bill_status] }}</td>
                         <td>
                             <button v-if="b.bill_status < 5" class="action-btn" @click="nextStatusBtn(b.bill_id)">
