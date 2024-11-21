@@ -48,7 +48,7 @@
                             <img src="../assets/images/qrthanhtoan.png">
                         </div>
                         
-                        <h3>Quét mã sau và gọi cho số: 0918347417 để xác nhận đơn hàng</h3>
+                        <h3>Quét mã sau và gọi cho số: 0949736727 để xác nhận đơn hàng</h3>
                         
                     </div>
                 </div>

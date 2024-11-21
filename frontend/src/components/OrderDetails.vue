@@ -11,7 +11,7 @@
                             <img :src="require(`../assets/images/${f.food_src}`)" alt="" />
                         </div>
                         <div class="content">
-                            <p class="name">{{ f.food_name }} <span>X {{ f.item_qty }} X {{handleOptionName(f.option_id)}}</span></p>
+                            <p class="name">{{ f.food_name }} <span>X {{ f.item_qty }} </span></p>
                             <p class="desc">{{ f.food_desc }}</p>
                             <p class="desc">Note :{{ f.note }}</p>
                         </div>
@@ -20,9 +20,9 @@
             </div>
 
             <div class="price">
-                <p>Sale: {{ this.data[0].bill_discount }}đ</p>
-                <p>Phí vận chuyển: {{ this.data[0].bill_delivery }}đ</p>
-                <p>Tổng cộng: {{ this.data[0].bill_total }}đ</p>
+                <p>Sale: {{ this.data[0].bill_discount ?? '' }}đ</p>
+                <p>Phí vận chuyển: {{ this.data[0].bill_delivery ?? '' }}đ</p>
+                <p>Tổng cộng: {{ this.data[0].bill_total ?? ''}}đ</p>
             </div>
         </div>
     </div>
@@ -58,12 +58,23 @@ export default {
         handleOptionName: function (data) {
             let result = "-";
             
-            for(let i=0;i<data.length;i++){
-                if(data[i] != "_"){
+            
+            for(let i=0;i<=data.length;i++){
+
+                if(data[i] != "_" && data[i] != undefined){
                     
                     let op = this.optionFoods.filter((f) => parseInt(f.option_id)==parseInt(data[i]));
-                    result += op[0].option_description + "-";
+                    
+                    if(op[0] == undefined){
+                        result +=  "-";
+                    }else {
+                        
+                        result += op[0].option_description + "-";
+                            
+                    }
+                        
                 }
+            
             }
             console.log("result",result);
             return result;

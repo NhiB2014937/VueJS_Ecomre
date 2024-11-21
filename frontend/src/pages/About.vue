@@ -9,11 +9,10 @@
             <div class="about-content">
                 <img src="../assets/images/taco-chefcartoon.png" alt="">
                 <div class="about-content-text">
-                    <p>Tiệm được thành lập bởi chị Đỗ Kim Chi đầu năm 2022 tại Hà Nội. Nhờ sự ủng hộ của khách hàng
-                    mà thương hiệu của chị đã được phát triển lớn mạnh và nổi bật giữa những quán khác tại Đại Học Hà Nội.
+                    <p>
                      Toàn bộ sản phẩm đến miệng của khách hàng
                 luôn luôn được đảm bảo cho ra chất lượng tốt nhất.</p>
-                    <p>Khách hàng có thể tận hưởng hương vị của Hemtrachanh tại ngõ 9 Đại học Hà Nội hoặc order mọi món về tận nhà.</p>
+                    <p>Khách hàng có thể tận hưởng hương vị của Hemtrachanh  order mọi món về tận nhà.</p>
                 </div>
             </div>
         </div>

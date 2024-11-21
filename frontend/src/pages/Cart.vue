@@ -135,7 +135,7 @@
                                 <h3>Hỗ Trợ</h3>
                             </div>
                             <div class="box-content text-center">
-                                <h3><i class="fa fa-phone"></i> +84 918347417</h3>
+                                <h3><i class="fa fa-phone"></i> +84 949736727</h3>
                                 <span class="small">
                                     Vui lòng gọi nếu có bất cứ vấn đề gì xảy ra. Phục vụ 24/7.
                                 </span>
@@ -199,11 +199,19 @@ export default {
         handleOptionName: function (data) {
             let result = "-";
             
-            for(let i=0;i<data.length;i++){
+            for(let i=0;i<=data.length;i++){
                 if(data[i] != "_"){
                     
                     let op = this.optionFoods.filter((f) => parseInt(f.option_id)==parseInt(data[i]));
-                    result += op[0].option_description + "-";
+                    
+                    if(op[0] == undefined){
+                        result +=  "-";
+                    }else {
+                        
+                        result += op[0].option_description + "-";
+                          
+                    }
+                       
                 }
             }
             console.log("result",result);
@@ -215,7 +223,7 @@ export default {
             let delivery = 15000;
             let i = 0;
             let filterFoods = this.filterFoods;
-            console.log("test =" ,filterFoods);
+            //console.log("test =" ,filterFoods);
 
             while (i < this.itemQuantity.length) {
                 subtotal = subtotal + parseInt(filterFoods[i].food_price) * this.itemQuantity[i] + parseInt(filterFoods[i].total_price_option);
@@ -277,7 +285,7 @@ export default {
                 });
                
                 
-                console.log("getall = ", existItem.data);
+                //console.log("getall = ", existItem.data);
             }
         }
 

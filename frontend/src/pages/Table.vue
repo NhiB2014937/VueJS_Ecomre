@@ -21,7 +21,7 @@
 
             <div class="icons">
                 <img src="../assets/images/icon-3.png" alt="">
-                <h3>02 Duong Khue, Cau Giay, Ha Noi, Viet Nam</h3>
+                <h3>51/12 , Ninh Kieu , Can tho, Viet Nam</h3>
             </div>
 
         </div>

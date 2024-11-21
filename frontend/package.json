@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fontsource/be-vietnam": "^4.5.2",
     "@zakerxa/vue-multiple-image-upload": "^1.0.8",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",

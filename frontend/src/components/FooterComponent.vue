@@ -51,8 +51,8 @@
         <div class="bottom">
 
             <div class="share">
-                <a href="https://www.facebook.com/hemtrachanh.trasua.coffe.luongthevinh" class="fab fa-facebook-f"></a>
-                <a href="https://www.instagram.com/rateyourcoffee._/" class="fab fa-instagram"></a>
+                <a href="https://www.facebook.com/minhnhi.duong.52" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/minhnhi.duong.270602?igsh=enpsazNpYTFqY2hl&utm_source=qr" class="fab fa-instagram"></a>
             </div>
 
         </div>

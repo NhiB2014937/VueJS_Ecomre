@@ -89,7 +89,7 @@
             <div class="content">
                 <span>Vì sao là Hemtrachanh ?</span>
                 <h3 class="title">Thứ gì tạo nên sự đặc biệt của Hemtrachanh</h3>
-                <p>Đồ ăn, thức uống luôn luôn được đảm bảo cho một chất lượng tốt nhất. Menu được tạo ra bởi Chi Đỗ, hứa hẹn sẽ mang đến
+                <p>Đồ ăn, thức uống luôn luôn được đảm bảo cho một chất lượng tốt nhất. Menu được tạo ra hứa hẹn sẽ mang đến
             một dịch dụ chuyên nghiệp, khách hàng có thể tận hượng hương vị bất kì lúc nào.</p>
                 <router-link @click="scrollToTop()" to="/about" class="btn">Tìm hiểu thêm</router-link>
 
